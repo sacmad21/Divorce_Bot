@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PrimeDialog Customization */
+.p-dialog {
+  position: fixed !important;
+  top: 8vh !important;
+  max-height: 85vh !important;
+  overflow-y: auto !important;
+}
+
+/* Theme Colors for Light/Dark Mode */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 30, 30, 30;
+  }
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Font Utility Classes */
+.font-inter {
+  font-family: var(--font-inter);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+.font-dm-sans {
+  font-family: var(--font-dm-sans);
+}
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+.font-plus-jakarta {
+  font-family: var(--font-plus-jakarta);
+}
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+/* Input Focus & Mobile Enhancements */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #3b82f6 !important; /* Tailwind's blue-500 */
+  -webkit-tap-highlight-color: transparent;
+}
+input,
+textarea {
+  font-size: 16px !important; /* Prevent zoom on iOS Safari */
+}
+
+/* General Touch & Layout Settings */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  height: 100%;
+  touch-action: manipulation;
+}
+
+/* Global Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(120, 120, 120, 0.4);
+  border-radius: 3px;
+}
+
+/* Auto Scrollbar Utility */
+.auto-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(120, 120, 120, 0.3) transparent;
+  transition: scrollbar-color 0.3s ease;
+}
+.auto-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.auto-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(120, 120, 120, 0.25);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.auto-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(120, 120, 120, 0.6);
+}
+.auto-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
