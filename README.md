@@ -10,5 +10,9 @@ pip install -r requirements.txt
 python server.py
 
 # Frontend
+cd frontend 
+
 npm install
-npm run dev 
+  
+  
+  npm run dev 
